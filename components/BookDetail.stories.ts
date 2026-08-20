@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import BookDetail from './BookDetail.vue'
-import type { BookDetail as BookDetailType } from '~/types/book'
+import type { BookDetail as BookDetailType } from '../types/book'
 
 const baseBook: BookDetailType = {
   id: 'abc123',
   title: 'The Name of the Wind',
   authors: ['Patrick Rothfuss'],
   publishedDate: '2007-03-27',
-  coverUrl: 'http://books.google.com/books/content?id=abc123&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+  coverUrl: 'https://books.google.com/books/content?id=abc123&printsec=frontcover&img=1&zoom=1&source=gbs_api',
   publisher: 'DAW Books',
   pageCount: 662,
   categories: ['Fiction', 'Fantasy'],
-  description: 'Told in Kvothe\'s own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.',
+  description: '<p>Told in Kvothe\'s own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.</p>',
 }
 
 const meta: Meta<typeof BookDetail> = {

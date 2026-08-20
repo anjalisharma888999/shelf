@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import BookCard from './BookCard.vue'
-import type { Book } from '~/types/book'
+import type { Book } from '../types/book'
 
 const baseBook: Book = {
   id: 'abc123',
   title: 'The Name of the Wind',
   authors: ['Patrick Rothfuss'],
   publishedDate: '2007-03-27',
-  coverUrl: 'http://books.google.com/books/content?id=abc123&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+  coverUrl: 'https://books.google.com/books/content?id=abc123&printsec=frontcover&img=1&zoom=1&source=gbs_api',
 }
 
 const meta: Meta<typeof BookCard> = {

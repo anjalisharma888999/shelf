@@ -15,6 +15,7 @@ These are deliberate product decisions applied on top of the AI-generated scaffo
 | 3 | **Search loader** | While a search request is in flight, a visible spinner and “Loading books…” message are shown so the user knows data is being fetched. Loader and error UI only appear when there is an active query (no false error on initial page load). |
 | 4 | **HTML book descriptions** | Google Books descriptions often include HTML. The detail page renders them with `v-html` and `.book-description` styles in `assets/css/main.css` instead of showing raw tags. |
 | 5 | **Cover image sizing** | Covers have **no forced aspect ratio** and **no coloured background**. They keep natural proportions and are capped at **max-width 200px** on search cards and the detail page. |
+| 6 | **Storybook Vite fix** | Stories failed to load (`Failed to fetch dynamically imported module` for `.stories.ts`). Fixed by adding `@vitejs/plugin-vue` and Tailwind v4’s Vite plugin in `.storybook/main.ts`, registering `NuxtLink` via Storybook’s `setup()` in `.storybook/preview.ts`, and using relative type imports in stories. `BookCard` and `BookDetail` stories build and render correctly. |
 
 Also documented earlier in this README: **no fallbacks in mappers** — map only fields returned by the API; handle missing data in the UI.
 
@@ -90,6 +91,7 @@ The API key is used only in Nuxt server routes (`server/api/books/*`) and is nev
 | Work plan | Initial 4-hour plan, stack choices, timeline | **No fallbacks in mappers** — map only API-returned fields; handle absence in UI (see Plan revisions below) |
 | Search UX | Basic search page scaffold | **Clear empty results + no API on empty**, **300ms debounce**, **visible loader**, no error flash on initial load |
 | Detail / covers | Text description and portrait cover frames | **`v-html` description styling**, natural cover size (max 200px, no aspect ratio, no background) |
+| Storybook | Initial Vue 3 + Vite Storybook scaffold | Fixed dynamic import failures: **`@vitejs/plugin-vue`**, Tailwind Vite plugin, proper **`NuxtLink` stub**, relative story imports |
 | Scaffolding | Nuxt/Tailwind/Storybook file structure and boilerplate | Architecture for shortlist composable, mapper rules, component split |
 | Components | Layout and Tailwind class patterns | Conditional rendering rules for missing data; shortlist panel UX |
 | README | Draft sections | Plan revision table, mapper policy, and full “Changes on top of AI” section |
