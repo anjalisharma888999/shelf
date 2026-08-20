@@ -82,14 +82,6 @@ The API key is used only in Nuxt server routes (`server/api/books/*`) and is nev
 
 ---
 
-## Unfinished / not yet done
-
-- [ ] Live deployment URL (configure `GOOGLE_BOOKS_API_KEY` on Vercel/Netlify/Cloudflare Pages and deploy)
-- [ ] 5-minute screen recording (Loom link to be added here)
-- [ ] Search result pagination
-- [ ] Automated tests
-
----
 
 ## AI tooling
 
