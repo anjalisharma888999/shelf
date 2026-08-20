@@ -24,12 +24,12 @@ function formatYear(publishedDate?: string) {
 <template>
   <article class="flex flex-col overflow-hidden rounded-(--radius-card) border border-shelf-border bg-shelf-surface shadow-sm transition hover:shadow-md">
     <NuxtLink :to="`/book/${book.id}`" class="flex flex-1 flex-col">
-      <div class="flex aspect-[3/4] items-center justify-center bg-shelf-accent-soft p-4">
+      <div class="mx-auto flex w-full max-w-[200px] items-center justify-center overflow-hidden">
         <img
           v-if="book.coverUrl"
           :src="book.coverUrl"
           :alt="book.title"
-          class="h-full w-full object-contain"
+          class="h-auto w-full object-contain"
         >
         <p v-else class="text-sm text-shelf-muted">
           No cover available

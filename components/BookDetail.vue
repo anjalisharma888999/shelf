@@ -22,14 +22,14 @@ function formatYear(publishedDate?: string) {
 </script>
 
 <template>
-  <article class="grid gap-(--spacing-section) lg:grid-cols-[240px_1fr]">
+  <article class="grid gap-(--spacing-section) lg:grid-cols-[auto_1fr]">
     <div class="flex justify-center lg:justify-start">
-      <div class="flex aspect-[3/4] w-full max-w-[240px] items-center justify-center rounded-(--radius-card) border border-shelf-border bg-shelf-accent-soft p-4">
+      <div class="flex w-full max-w-[200px] items-center justify-center overflow-hidden">
         <img
           v-if="book.coverUrl"
           :src="book.coverUrl"
           :alt="book.title"
-          class="h-full w-full object-contain"
+          class="h-auto w-full object-contain"
         >
         <p v-else class="text-sm text-shelf-muted">
           No cover available
@@ -94,9 +94,10 @@ function formatYear(publishedDate?: string) {
         <h2 class="text-xs font-semibold uppercase tracking-wide text-shelf-muted">
           Description
         </h2>
-        <p class="mt-2 whitespace-pre-line text-sm leading-relaxed text-shelf-text">
-          {{ book.description }}
-        </p>
+        <div
+          class="book-description mt-2 text-sm leading-relaxed text-shelf-text"
+          v-html="book.description"
+        />
       </div>
 
       <button
