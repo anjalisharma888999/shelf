@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-shelf-bg: #faf8f5;
+  --color-shelf-surface: #ffffff;
+  --color-shelf-border: #e8e2d9;
+  --color-shelf-text: #1c1917;
+  --color-shelf-muted: #78716c;
+  --color-shelf-accent: #b45309;
+  --color-shelf-accent-hover: #92400e;
+  --color-shelf-accent-soft: #fef3c7;
+
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
+
+  --spacing-page: 1.5rem;
+  --spacing-section: 2rem;
+  --spacing-card: 1rem;
+
+  --radius-card: 0.75rem;
+  --radius-button: 0.5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-shelf-bg);
+  color: var(--color-shelf-text);
+}
