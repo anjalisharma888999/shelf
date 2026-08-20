@@ -107,7 +107,7 @@ Every decision above should be explainable in a live walkthrough.
 
 
 
-*Pending deployment.*
+https://anjali-shelf.netlify.app/
 
 ---
 
@@ -398,17 +398,3 @@ Aim for **8–12 commits**, e.g.:
 
 
 ---
-
-
-
-### Pre-submission checklist
-
-- [ ] Search works end-to-end
-- [ ] Detail page has its own URL
-- [ ] Shortlist add/remove survives refresh
-- [ ] No API key in repo or client bundle
-- [ ] `.env.example` present
-- [ ] Live URL works
-- [ ] README complete
-- [ ] Recording link included
-- [ ] Unfinished items documented honestly
