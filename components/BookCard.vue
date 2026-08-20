@@ -29,7 +29,7 @@ function formatYear(publishedDate?: string) {
           v-if="book.coverUrl"
           :src="book.coverUrl"
           :alt="book.title"
-          class="h-auto w-full object-contain"
+          class="h-auto w-full object-contain mt-2"
         >
         <p v-else class="text-sm text-shelf-muted">
           No cover available
@@ -54,13 +54,13 @@ function formatYear(publishedDate?: string) {
       </div>
     </NuxtLink>
 
-    <div class="border-t border-shelf-border p-(--spacing-card) pt-0">
+    <div class="border-t border-shelf-border p-(--spacing-card)">
       <button
         type="button"
         class="w-full rounded-(--radius-button) px-3 py-2 text-sm font-medium transition"
         :class="shortlisted
-          ? 'bg-shelf-accent text-white hover:bg-shelf-accent-hover'
-          : 'border border-shelf-border bg-white text-shelf-text hover:bg-shelf-accent-soft'"
+          ? 'bg-shelf-accent text-white hover:bg-shelf-accent-hover cursor-pointer'
+          : 'border border-shelf-border bg-white text-shelf-text hover:bg-shelf-accent-soft cursor-pointer'"
         @click="$emit('toggleShortlist', book)"
       >
         {{ shortlisted ? 'Remove from shortlist' : 'Add to shortlist' }}
